@@ -13,7 +13,6 @@ import { NexgLogo } from "./NexgLogo.jsx";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import neonStyles from "../styles/neon.module.css";
-import { ThemeSwitch } from "./theme-switch";
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -64,9 +63,6 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <NavbarItem className="hidden md:flex">
-          <ThemeSwitch />
-        </NavbarItem>
 
         <NavbarItem className="hidden lg:flex">
           <Link

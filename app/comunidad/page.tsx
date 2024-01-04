@@ -1,6 +1,6 @@
 import { title } from "@/components/primitives";
 
-export default function BlogPage() {
+export default function ComunityPage() {
 	return (
 		<div>
 			<h1 className={title()}>Comunidad</h1>
