@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
