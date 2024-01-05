@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#header-nav{
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 800px;
+}
+
+@keyframes blur {
+    to{
+        background: rgba(0, 0, 0, 0.792);
+        backdrop-filter: blur(10px);
+    }
+}

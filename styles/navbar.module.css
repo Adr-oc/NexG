@@ -1,0 +1,103 @@
+.neonText{
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+    color: #9decd2;
+    text-shadow: 0 0 5px #52ffc5;;
+}
+
+.neonText::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: #fff;
+    box-shadow: 0 0 10px #fff, 0 0 10px #0ff, 0 0 15px #fff, 0 0 20px #fff;
+    opacity: 1
+}
+
+.neonUnderline {
+    position: relative;
+}
+
+.neonUnderline::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    height: 1px;
+    background: #fff;
+    box-shadow: 0 0 5px #fff, 0 0 10px rgb(255, 255, 255), 0 0 15px #fff, 0 0 20px #fff;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(0);
+}
+
+.neonUnderline:hover::after {
+    opacity: 1;
+    left: 0;
+    right: 0;
+    transform: scaleX(0.99);
+}
+
+
+.glassNeonButton {
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0;
+    background-color: rgba(82, 255, 197, 0.2);
+    box-shadow: rgba(75, 222, 202, 0.315) 0 0 8px;
+    color: white;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  
+  .glassNeonButton:hover {
+    background-color: hsl(152, 65%, 52%);
+    color: hsl(0, 0%, 2%);
+    box-shadow: rgba(80, 224, 171, 0.229) 1px 7px 27px 1px;
+  }
+  
+  .glassNeonButton:active {
+    background-color: hsla(161, 65%, 60%, 0.363);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(24, 220, 132) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 100ms;
+  }
+  
+  
+  .loginButton {
+    background-color: #ffffff00;
+    color: #ffffff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #ffffff48 0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+  }
+  
+  .loginButton:hover {
+    background-color: #ffffff;
+    color: #000
+  }
+  
+  .loginButton svg {
+    width: 1.6em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .loginButton:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .text {
+    margin: 0 1.5em
+  }

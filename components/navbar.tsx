@@ -7,12 +7,13 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  Button,
 } from "@nextui-org/react";
 import Link from "next/link";
-import { NexgLogo } from "./NexgLogo.jsx";
+import NexgLogo from "./NexgLogo.jsx";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import neonStyles from "../styles/neon.module.css";
+import navbarStyle from "../styles/navbar.module.css";
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -25,14 +26,14 @@ export const Navbar = () => {
   ];
 
   return (
-    <NavbarUI>
+    <NavbarUI id="header-nav">
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
-          <NexgLogo />
+          <NexgLogo width="5.4em" height="2.2em" className={""} />
         </NavbarBrand>
       </NavbarContent>
 
@@ -41,7 +42,7 @@ export const Navbar = () => {
         justify="center"
       >
         <NavbarBrand>
-          <NexgLogo />
+          <NexgLogo width="5.4em" height="2.2em" className={""} />
         </NavbarBrand>
 
         {NAV_ITEMS.map(({ name, url }) => (
@@ -52,8 +53,8 @@ export const Navbar = () => {
               className={clsx(
                 "transition ease-in-out duration-300 border-b-2 border-transparent",
                 pathname === url
-                  ? [neonStyles.neonText, "text-primary-200"]
-                  : [neonStyles.neonUnderline]
+                  ? [navbarStyle.neonText]
+                  : [navbarStyle.neonUnderline]
               )}
             >
               {name}
@@ -63,20 +64,13 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent justify="end">
-
         <NavbarItem className="hidden lg:flex">
-          <Link
-            href="#"
-            className="transition ease-in-out duration-300 shadow-stone-200"
-          >
-            Iniciar Sesion
-          </Link>
+          <Button variant="light" color="primary" className="bg-primary-800 bg-opacity-10">
+            Iniciar sesion
+          </Button>
         </NavbarItem>
         <NavbarItem>
-          <Link
-            href="#"
-            className="transition ease-in-out bg-primary hover:shadow-primary duration-300"
-          >
+          <Link href="#" className={navbarStyle.glassNeonButton}>
             Registrate
           </Link>
         </NavbarItem>
